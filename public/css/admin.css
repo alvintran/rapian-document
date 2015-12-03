@@ -1,0 +1,42 @@
+#avatar {
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+}
+.form-filter label {
+	margin-right: 5px;
+}
+.checkbox-list {
+	margin: 0;
+}
+.checkbox-list li {
+	padding-left: 0;
+	padding-right: 10px;
+	margin-bottom: 5px;
+}
+.checkbox-list label {
+	cursor: pointer;
+}
+.checkbox-list li p {
+	font-style: 12px;
+	font-weight: normal;
+	font-style: italic;
+	padding-left: 15px;
+}
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.text-social {
+	margin: 10px 0px 0px;
+}
+.text-strong {
+	font-weight: bold;
+}
+.btn-active-action {
+	color: #2a6496;
+}
