@@ -27,7 +27,8 @@ class CheckPermission
      */
     public function handle($request, Closure $next, $roles = '', $permissions = '')
     {
-        if ($this->userHasAccessTo($request, $roles, $permissions))
+        if ((!$this->auth->guest() && $request->user()->hasRole('superadmin')) ||
+            $this->userHasAccessTo($request, $roles, $permissions))
         {
             view()->share('currentUser', $request->user());
             return $next($request);
@@ -38,13 +39,30 @@ class CheckPermission
     public function userHasAccessTo($request, $roles, $permissions)
     {
         $action = $request->route()->getAction();
-        $roles = isset($action['roles']) ? ($roles . '|' . $action['roles']) : $roles;
-        $permissions = isset($action['permissions']) ? ($permissions . '|' . $action['permissions']) : $permissions;
+
+        // Merge roles
+        if (isset($action['roles']))
+        {
+            if (empty($roles)) {
+                $roles = $action['roles'];
+            } else {
+                $roles = $roles . '|' . $action['roles'];
+            }
+        }
+
+        // Merge permissions
+        if (isset($action['permissions']))
+        {
+            if (empty($permissions)) {
+                $permissions = $action['permissions'];
+            } else {
+                $permissions = $permissions . '|' . $action['permissions'];
+            }
+        }
 
         $roles = empty($roles) ? null : explode('|', $roles);
         $permissions = empty($permissions) ? null : explode('|', $permissions);
 
-        $roles[] = 'superadmin';
-        return !$this->auth->guest() && $request->user()->ability($roles, $permissions);
+        return !$this->auth->guest() && $request->user()->ability($roles, $permissions, ['validate_all' => true]);
     }
 }

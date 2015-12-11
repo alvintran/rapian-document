@@ -41,7 +41,6 @@ $app->singleton(
     Nht\Exceptions\Handler::class
 );
 
-
 // Register a singleton Upload
 $app->singleton('Upload', function() {
 	$config = Config::get('upload');
