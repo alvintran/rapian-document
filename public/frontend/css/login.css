@@ -1,0 +1,97 @@
+body {
+	font-size: 13px;
+	padding-top: 65px;
+}
+body.img {
+	background-image: url('/images/gallery/login_bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 1366px;
+	background-position: 0px -150px;
+}
+h1 {
+	color: #fff;
+}
+a:hover {
+	text-decoration: none;
+}
+
+a {
+	color: rgba(0,0,0,0.8);
+}
+a.text-success {
+	content: #3c763d !important;
+}
+.see-more-color {
+	color: rgba(0,0,0,0.3) !important;
+}
+.see-more-color:hover {
+	color: rgba(0,0,0,0.6) !important;
+}
+h1 {
+	line-height: 50px;
+}
+
+/*form control*/
+.form-control, .btn {
+	border-radius: 0px !important;
+	color: rgba(0,0,0,0.44) !important;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.form-control:focus {
+	border-color: #ccc !important;
+	outline: 0;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+.navbar-brand {
+	font-size: 30px;
+}
+.navbar-default {
+	background-color: #fff !important;
+	border: none !important;
+	box-shadow: 0 0 1px rgba(0,0,0,0.15);
+}
+.navbar, .navbar-brand {
+	height: 65px !important;
+}
+.navbar-brand {
+	line-height: 27px !important;
+}
+.navbar-nav > li > a {
+	padding-top: 22px;
+	padding-bottom: 22px;
+	line-height: 21px;
+	text-transform: uppercase !important;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+	background: none !important;
+	color: rgba(0,0,0,0.8) !important;
+	border-bottom: 2px rgba(0,0,0,0.8) solid;
+	text-transform: uppercase !important;
+}
+.col-wc, .col-login {
+	margin-top: 145px;
+}
+.col-wc.registor, .col-login.registor {
+	margin-top: 75px;
+}
+.col-login {
+	box-shadow: 0 0 1px rgba(0,0,0,0.15);
+	background-color: #fff;
+	padding: 20px 0px 10px 15px;
+
+}
+.reset-password {
+	margin-top: 9px;
+}
+
+.footer {
+	clear: both;
+}
+.footer a {
+	margin-right: 10px;
+}

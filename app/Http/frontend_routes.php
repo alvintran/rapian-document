@@ -16,6 +16,9 @@ Route::group(['namespace' => 'Frontend'], function() {
 		'uses' => 'HomeController@index'
 	]);
 
+	Route::get('/test', 'TestController@index');
+	Route::post('/test', 'TestController@upload');
+
 	// Profile
 	//
 	Route::group(['middleware' => 'auth', 'prefix' => 'profile'], function() {

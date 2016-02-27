@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'local',
+    'default' => 's3',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,10 +64,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key'    => 'your-key',
-            'secret' => 'your-secret',
-            'region' => 'your-region',
-            'bucket' => 'your-bucket',
+            'key'    => 'AKIAJH7IMDK5WKL6YKLQ',
+            'secret' => '32luBC5znF6Ta2fHwGV3362bp9TnK0UZzAmQ/BSr',
+            'region' => 'ap-southeast-1',
+            'bucket' => 'rap-image',
         ],
 
         'rackspace' => [
