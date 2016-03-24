@@ -45,10 +45,17 @@
 					<li><a href="#" class="fa fa-twitter"></a></li>
 				</ul>
 				<h4><span>Đăng ký nhận tin sản phẩm mới</span></h4>
+<<<<<<< HEAD
 				<form class="form-inline" method="POST" id="subscribe-form" action="/subscribe">
 					{!! csrf_field() !!}
 					<div class="form-group">
 						<input type="email" class="form-control input-sm" id="subscriber" name="subscriber" placeholder="Email">
+=======
+				<form class="form-inline" method="POST" id="subscribe-form" action="">
+					<div class="form-group">
+						<input type="email" class="form-control input-sm" id="subscriber" name="subscriber" placeholder="Email">
+						{!! csrf_field() !!}
+>>>>>>> f7a80eeaab2f4bf874a5e83740af8c60f8779c89
 					</div>
 					<button type="submit" id="btn-subscribe" class="btn btn-danger btn-sm">Đăng ký</button>
 					<p><small>Chúng tôi sẽ không spam bạn, bạn có thể hủy đăng ký bất cứ lúc nào.</small></p>

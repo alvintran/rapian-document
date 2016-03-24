@@ -17,6 +17,7 @@ Core framework của Nguyên Hà Tech dựa trên nền tảng framework Laravel
 Một số các tính năng có sẵn trong core:
 
 - Hệ thống authentication với emai/password và thông qua tài khoản mạng xã hội (facebook, google plus, twitter, github, bitbucket, linkedin):
+<<<<<<< HEAD
    + Login
    + Register
    + Forgot password

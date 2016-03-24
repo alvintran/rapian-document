@@ -31,7 +31,6 @@ class AdminBlogFormRequest extends Request
             'active' => '',
             'hot' => ''
         ];
-
         return $rules;
     }
 }
