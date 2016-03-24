@@ -7,7 +7,7 @@
 	<div class="panel-body">
 		<form class="form-horizontal bucket-form" method="post" action="{{ route('blog.update', $blog->id) }}" enctype="multipart/form-data">
 			<div class="form-group">
-				<label for="image" class="col-sm-2 control-label">Ảnh mô tả <b class="text-danger">*</b></label>
+				<label for="image" class="col-sm-2 control-label">Ảnh mô tả</label>
 				<div class="col-sm-2">
 					<img src="{{ $blog->getThumbnail() }}" alt="" width="140">
 				</div>

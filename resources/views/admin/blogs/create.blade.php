@@ -25,7 +25,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="image" class="col-sm-2 control-label">Ảnh mô tả <b class="text-danger">*</b></label>
+				<label for="image" class="col-sm-2 control-label">Ảnh mô tả</label>
 				<div class="col-sm-10">
 					<input name="image" type="file" class="form-control" placeholder='Image' />
 					{!! $errors->first('image', '<span class="help-inline text-danger">:message</span>') !!}

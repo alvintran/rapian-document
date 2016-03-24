@@ -32,9 +32,6 @@ class AdminBlogFormRequest extends Request
             'hot' => ''
         ];
 
-        if ($this->is('admin/blogs')) {
-            $rules['image'] .= '|required';
-        }
         return $rules;
     }
 }
