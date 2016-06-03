@@ -1,0 +1,11 @@
+email: admin@rapian.com
+fullname: Admin
+title: Administrator
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$bBeeOCZwsMm0Fk89A4WqYObPmtx6LwjKHz2G4JsKcjtyjliqz/Ds.

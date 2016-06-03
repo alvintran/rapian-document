@@ -1,0 +1,5 @@
+/vendor
+/log/grav.log
+/log/populariry/*
+/cache
+/backup
