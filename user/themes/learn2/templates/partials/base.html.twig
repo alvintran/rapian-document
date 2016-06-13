@@ -42,54 +42,54 @@
 </head>
 <body class="searchbox-hidden {{ page.header.body_classes }}" data-url="{{ page.route }}">
     {% block sidebar %}
-    <nav id="sidebar">
-        <div id="header-wrapper">
-            <div id="header">
-                <a id="logo" href="{{ theme_config.home_url ?: base_url_absolute }}"><img src="{{ url('theme://img/logo-rapian.png') }}" alt="Rapian logo"> Rapian</a>
-                <div class="searchbox">
-                    <label for="search-by"><i class="fa fa-search"></i></label>
-                    <input id="search-by" type="text" placeholder="{{ 'THEME_LEARN2_SEARCH_DOCUMENTATION'|t }}"
-                           data-search-input="{{ base_url_relative }}/search.json/query"/>
-                    <span data-search-clear><i class="fa fa-close"></i></span>
+        <nav id="sidebar">
+            <div id="header-wrapper">
+                <div id="header">
+                    <a id="logo" href="{{ theme_config.home_url ?: base_url_absolute }}"><img src="{{ url('theme://img/logo-rapian.png') }}" alt="Rapian logo"> Rapian</a>
+                    <div class="searchbox">
+                        <label for="search-by"><i class="fa fa-search"></i></label>
+                        <input id="search-by" type="text" placeholder="{{ 'THEME_LEARN2_SEARCH_DOCUMENTATION'|t }}"
+                               data-search-input="{{ base_url_relative }}/search.json/query"/>
+                        <span data-search-clear><i class="fa fa-close"></i></span>
+                    </div>
                 </div>
             </div>
-        </div>
-        {% include 'partials/sidebar.html.twig' %}
-    </nav>
+            {% include 'partials/sidebar.html.twig' %}
+        </nav>
     {% endblock %}
 
     {% block body %}
-    <section id="body">
-        <div id="overlay"></div>
+        <section id="body">
+            <div id="overlay"></div>
 
-        <div class="padding highlightable">
-            <a href="#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+            <div class="padding highlightable">
+                <a href="#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
 
-            {% block topbar %}{% if theme_config.github.position == 'top' or config.plugins.breadcrumbs.enabled %}
-            <div id="top-bar">
-                {% if theme_config.github.position == 'top' %}
-                <div id="top-github-link">
-                {% include 'partials/github_link.html.twig' %}
+                {% block topbar %}{% if theme_config.github.position == 'top' or config.plugins.breadcrumbs.enabled %}
+                <div id="top-bar">
+                    {% if theme_config.github.position == 'top' %}
+                        <div id="top-github-link">
+                            {% include 'partials/github_link.html.twig' %}
+                        </div>
+                    {% endif %}
+
+                    {% if config.plugins.breadcrumbs.enabled %}
+                    {% include 'partials/breadcrumbs.html.twig' %}
+                    {% endif %}
                 </div>
-                {% endif %}
+                {% endif %}{% endblock %}
 
-                {% if config.plugins.breadcrumbs.enabled %}
-                {% include 'partials/breadcrumbs.html.twig' %}
-                {% endif %}
+                {% block content %}{% endblock %}
+
+                {% block footer %}
+                    {% if theme_config.github.position == 'bottom' %}
+                    {% include 'partials/github_note.html.twig' %}
+                    {% endif %}
+                {% endblock %}
+
             </div>
-            {% endif %}{% endblock %}
-
-            {% block content %}{% endblock %}
-
-            {% block footer %}
-                {% if theme_config.github.position == 'bottom' %}
-                {% include 'partials/github_note.html.twig' %}
-                {% endif %}
-            {% endblock %}
-
-        </div>
-        {% block navigation %}{% endblock %}
-    </section>
+            {% block navigation %}{% endblock %}
+        </section>
     {% endblock %}
     {% block analytics %}
         {% if theme_config.google_analytics_code %}

@@ -1,5 +1,6 @@
 ---
 title: 'Giới thiệu tổng quan'
+body_classes: 'fa fa-user'
 slug: gioi-thieu-tong-quan-ve-rapian
 taxonomy:
     category:

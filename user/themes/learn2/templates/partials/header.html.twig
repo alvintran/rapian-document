@@ -1,25 +1,46 @@
-<header>
-  <section class="hero">
-    <div class="texture-overlay"></div>
-    <div class="container">
-      <div class="row nav-wrapper">
-        <div class="col-md-6 col-sm-6 col-xs-6 text-left">
-          <a href="/" id="main-logo"><img src="{{ url('theme://img/logo-rapian.png') }}" alt="Rapian logo"> Rapian</a>
-        </div>
-        <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
-          <p>MENU</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
-        </div>
-      </div>
-      <div class="row hero-content">
-        <div class="col-md-12">
-          <h1 class="animated fadeInDown">Mỗi doanh nghiệp lớn bắt đầu với một ý tưởng</h1>
-          <p>Rapian là nền tảng mà bạn cần để xây dựng công việc kinh doanh mà bạn đã luôn luôn mơ ước</p>
-
-          {% for button in site.header.buttons %}
-              <a href="{{ button.link }}" class="{{ button.class }}">{{ button.text }} {% if button.icon %}<i class="fa fa-{{ button.icon }}"></i>{% endif %}</a>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </section>
+<header class="header fade_in">
+	<section class="container header_container clearfix">
+		<div class="logo_branch clearfix">
+			<a href="/" class="">
+				<img class="logo" src="http://rapian.com/assets/img/logo-64.png" alt=""/>
+				<p><span class="logo_text" data-hover="Rapian">Rapian</span></p>
+			</a>
+		</div>
+		<div class="nav_toggle_holder">
+			<div class="nav_toggle">
+				<span class="nav_icon_bar"></span>
+				<span class="nav_icon_bar"></span>
+				<span class="nav_icon_bar"></span>
+			</div>
+		</div>
+		<div class="nav">
+			<span class="nav_top_arrow"></span>
+			<ul class="list-unstyled">
+				<li class="home_link">
+					<a href="/" class="active">
+						<span data-hover="Trang chủ">Trang chủ</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span data-hover="Rapian+">Rapian+</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span data-hover="Tính năng">Tính năng</span>
+					</a>
+				</li>
+				<li>
+					<a class="page-scroll" href="">
+						<span data-hover="Hỗ trợ">Hỗ trợ</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="header_account">
+			<a href="http://rapian.com/auth/dang-ky.html?utm_source=top_navigation&amp;utm_medium=cpc&amp;utm_campaign=free_create" class="rap-button rap-button-medium rap-button-free" style="float: none;">Đăng ký ngay</a>
+			<a href="http://rapian.com/auth/login" class="rap-button rap-button-medium rap-login">Đăng nhập</a>
+		</div>
+	</section>
 </header>

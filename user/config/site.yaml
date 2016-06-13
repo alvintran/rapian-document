@@ -12,5 +12,8 @@ summary:
   format: short
   size: 300
   delimiter: '==='
+redirects:
+  Rapos: rapian.com/rapos
+  Rapage: rapian.com/rapage
 blog:
   route: /blog

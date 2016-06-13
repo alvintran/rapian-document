@@ -1,0 +1,4 @@
+enabled: true
+page_path: /blog
+taxonomy_level_1: topic
+taxonomy_level_2: tag

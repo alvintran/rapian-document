@@ -48,14 +48,13 @@
                 {% if theme_config.root_page %}
                     {{ _self.loop(page.find(theme_config.root_page), '') }}
                 {% else %}
-            {{ _self.loop(pages, '') }}
+                    {{ _self.loop(pages, '') }}
                 {% endif %}
             </ul>
         {% endif %}
         <hr />
 
-        <a class="padding" href="#" data-clear-history-toggle><i
-                    class="fa fa-fw fa-history"></i> {{ 'THEME_LEARN2_CLEAR_HISTORY'|t }}</a><br/>
+        <a class="padding" href="#" data-clear-history-toggle><i class="fa fa-fw fa-history"></i> {{ 'THEME_LEARN2_CLEAR_HISTORY'|t }}</a><br/>
 
         <section id="footer">
             <p>{{ 'THEME_LEARN2_BUILT_WITH_GRAV'|t }}</p>
