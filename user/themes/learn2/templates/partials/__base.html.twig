@@ -35,41 +35,25 @@
 		{% do assets.addJs('theme://js/clipboard.min.js') %}
 		{% do assets.addJs('theme://js/jquery.scrollbar.min.js') %}
 		{% do assets.addJs('theme://js/learn.js') %}
-		{% do assets.addJs('theme://js/site.js') %}
 		{{ assets.js() }}
 	{% endblock %}
 
 	{% endblock %}
 </head>
 <body class="searchbox-hidden {{ page.header.body_classes }}" data-url="{{ page.route }}">
-	<header class="header-site fade_in">
-	<section class="container header_container clearfix">
-		<div class="logo_branch clearfix">
-			<a href="/" class="">
-				<img class="logo" src="http://rapian.com/assets/img/logo-64.png" alt="">
-				<p><span class="logo_text" data-hover="Rapian">Rapian</span></p>
-			</a>
-		</div>
-		<div class="nav_toggle_holder">
-			<div class="nav_toggle">
-				<span class="nav_icon_bar"></span>
-				<span class="nav_icon_bar"></span>
-				<span class="nav_icon_bar"></span>
-			</div>
-		</div>
-		<div class="search-box" id="search-form">
-			<i class="fa fa-search search-by"></i>
-			<input id="search-by" type="text" placeholder="{{ 'THEME_LEARN2_SEARCH_DOCUMENTATION'|t }}"
-			data-search-input="{{ base_url_relative }}/search.json/query"/>
-			<span data-search-clear><i class="fa fa-close"></i></span>
-		</div>
-		<div class="header_account">
-			<a target="_blank" href="http://rapian.com/auth/dang-ky.html?utm_source=top_navigation&amp;utm_medium=cpc&amp;utm_campaign=rapian_help" class="rap-button rap-button-medium rap-button-free" style="float: none;">Đăng ký ngay</a>
-		</div>
-	</section>
-</header>
 	{% block sidebar %}
 		<nav id="sidebar">
+			<div id="header-wrapper">
+				<div id="header">
+					<a id="logo" href="{{ theme_config.home_url ?: base_url_absolute }}"><img src="{{ url('theme://img/logo-rapian.png') }}" alt="Rapian logo"> Rapian</a>
+					<div class="searchbox">
+						<label for="search-by"><i class="fa fa-search"></i></label>
+						<input id="search-by" type="text" placeholder="{{ 'THEME_LEARN2_SEARCH_DOCUMENTATION'|t }}"
+							   data-search-input="{{ base_url_relative }}/search.json/query"/>
+						<span data-search-clear><i class="fa fa-close"></i></span>
+					</div>
+				</div>
+			</div>
 			{% include 'partials/sidebar.html.twig' %}
 		</nav>
 	{% endblock %}

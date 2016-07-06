@@ -476,7 +476,7 @@ a, a:hover, a:focus, a:after {
 }
 /*Home Header*/
 .home_header {
-	height: calc(100vh - 220px);
+	height: calc(50vh - 300px);
 	position: relative;
 	z-index: 2;
 	display: table;
@@ -488,7 +488,7 @@ a, a:hover, a:focus, a:after {
 	position: relative;
 	text-align: center;
 	vertical-align: middle;
-	height: 400px;
+	height: 350px;
 }
 @media only screen and (max-width: 500px) {
 	.hero_container {
@@ -496,7 +496,7 @@ a, a:hover, a:focus, a:after {
 	}
 }
 .hero_container {
-	min-height: 550px;
+	min-height: 300px;
 }
 .hero_content {
 	position: relative;
@@ -1031,4 +1031,8 @@ footer {
 }
 .topic-listing article ul li a:hover {
 	color: #A9BF04;
+}
+.rap-button-free {
+	background: #afde12;
+	border: 1px solid #afde12;
 }
