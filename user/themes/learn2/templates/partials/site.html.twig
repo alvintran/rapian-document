@@ -9,7 +9,7 @@
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.ico') }}" />
+        <link rel="icon" type="image/png" href="http://rapian.com/assets/img/16.png" />
 
          {% block stylesheets %}
                 {% do assets.addCss('theme://css/bootstrap.min.css') %}
@@ -20,6 +20,7 @@
                 {% do assets.addCss('theme://css/styles.css') %}
                 {% do assets.addCss('theme://css/queries.css') %}
                 {% do assets.addCss('theme://css/site.css') %}
+                {% do assets.addCss('theme://css/main.css',10) %}
         {% endblock %}
         {{ assets.css() }}
 
@@ -27,37 +28,22 @@
 
         <script src="{{ url('theme://js/modernizr.custom.71422.js') }}"></script>
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
         {% endblock head%}
     </head>
-    <body>
-        <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <!-- open/close -->
+    <body class="{{ page.header.body_classes }}"  data-url="{{ page.route }}">
+        <section id="wrapper" class="site_wrapper">
+            {% block header %}
+                {% include 'partials/header.html.twig' %}
+            {% endblock %}
 
-        {% block header %}
-             {% include 'partials/header.html.twig' %}
-        {% endblock %}
+            {% block banner %}{% endblock %}
 
-        {% block body %}
-            {% block content %}{% endblock %}
-        {% endblock %}
+            {% block body %}
+                {% block content %}{% endblock %}
+            {% endblock %}
 
-        {% block footer %}
-             {% include 'partials/footer.html.twig' %}
-        {% endblock %}
-
-        {% block navigation %}
-           {% include 'partials/navigation.html.twig' %}
-        {% endblock %}
-
+            {% block footer %}{% endblock %}
+        </section>
         {% block javascripts %}
             {% do assets.addJs('theme://js/min/toucheffects-min.js') %}
             {% do assets.add('jquery',101) %}
@@ -65,11 +51,11 @@
             {% do assets.addJs('theme://js/jquery.fancybox.pack.js') %}
             {% do assets.addJs('theme://js/retina.js') %}
             {% do assets.addJs('theme://js/waypoints.min.js') %}
+            {% do assets.addJs('theme://js/jquery.matchHeight-min.js') %}
             {% do assets.addJs('theme://js/bootstrap.min.js') %}
+            {% do assets.addJs('theme://js/main.js') %}
             {% do assets.addJs('theme://js/min/scripts-min.js') %}
         {% endblock %}
         {{ assets.js() }}
-
-
     </body>
 </html>
