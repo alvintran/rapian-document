@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Nht
+        psr4_prefix: Nht
+        src_path: app

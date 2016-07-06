@@ -1,5 +1,9 @@
 /vendor
-/log/grav.log
-/log/populariry/*
+/node_modules
+.env
+composer.lock
+/logs
 /cache
 /backup
+/user/pages
+/user/accounts
