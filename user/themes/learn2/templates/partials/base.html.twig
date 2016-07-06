@@ -9,7 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<link rel="alternate" type="application/atom+xml" href="{{ base_url_absolute}}/feed:atom" title="Atom Feed" />
 	<link rel="alternate" type="application/rss+xml" href="{{ base_url_absolute}}/feed:rss" title="RSS Feed" />
-	<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}">
+	<link rel="icon" type="image/png" href="http://rapian.com/assets/img/16.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
 
 	{% block stylesheets %}
@@ -32,6 +33,7 @@
 	{% block javascripts %}
 		{% do assets.addJs('jquery',101) %}
 		{% do assets.addJs('theme://js/modernizr.custom.71422.js',100) %}
+		{% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js',100) %}
 		{% do assets.addJs('theme://js/featherlight.min.js') %}
 		{% do assets.addJs('theme://js/clipboard.min.js') %}
 		{% do assets.addJs('theme://js/jquery.scrollbar.min.js') %}
@@ -42,33 +44,37 @@
 
 	{% endblock %}
 </head>
-<body class="searchbox-hidden {{ page.header.body_classes }}" data-url="{{ page.route }}">
+<body class="searchbox-hidden page-wapper {{ page.header.body_classes }}" data-url="{{ page.route }}">
+	<div id="pageNote" class="alert alert-warning alert-dismissible fade in" role="alert">
+		<button type="button" class="close hide" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+		<strong>Thông báo!</strong> Tài liệu hướng dẫn được cập nhật hàng ngày.
+	</div>
 	<header class="header-site fade_in">
-	<section class="container header_container clearfix">
-		<div class="logo_branch clearfix">
-			<a href="/" class="">
-				<img class="logo" src="http://rapian.com/assets/img/logo-64.png" alt="">
-				<p><span class="logo_text" data-hover="Rapian">Rapian</span></p>
-			</a>
-		</div>
-		<div class="nav_toggle_holder">
-			<div class="nav_toggle">
-				<span class="nav_icon_bar"></span>
-				<span class="nav_icon_bar"></span>
-				<span class="nav_icon_bar"></span>
+		<section class="container header_container clearfix">
+			<div class="logo_branch clearfix">
+				<a href="/" class="">
+					<img class="logo" src="http://rapian.com/assets/img/logo-64.png" alt="">
+					<p><span class="logo_text" data-hover="Rapian">Rapian</span></p>
+				</a>
 			</div>
-		</div>
-		<div class="search-box" id="search-form">
-			<i class="fa fa-search search-by"></i>
-			<input id="search-by" type="text" placeholder="{{ 'THEME_LEARN2_SEARCH_DOCUMENTATION'|t }}"
-			data-search-input="{{ base_url_relative }}/search.json/query"/>
-			<span data-search-clear><i class="fa fa-close"></i></span>
-		</div>
-		<div class="header_account">
-			<a target="_blank" href="http://rapian.com/auth/dang-ky.html?utm_source=top_navigation&amp;utm_medium=cpc&amp;utm_campaign=rapian_help" class="rap-button rap-button-medium rap-button-free" style="float: none;">Đăng ký ngay</a>
-		</div>
-	</section>
-</header>
+			<div class="nav_toggle_holder">
+				<div class="nav_toggle">
+					<span class="nav_icon_bar"></span>
+					<span class="nav_icon_bar"></span>
+					<span class="nav_icon_bar"></span>
+				</div>
+			</div>
+			<div class="search-box" id="search-form">
+				<i class="fa fa-search search-by"></i>
+				<input id="search-by" type="text" placeholder="{{ 'THEME_LEARN2_SEARCH_DOCUMENTATION'|t }}"
+				data-search-input="{{ base_url_relative }}/search.json/query"/>
+				<span data-search-clear><i class="fa fa-close"></i></span>
+			</div>
+			<div class="header_account">
+				<a target="_blank" href="http://rapian.com/auth/dang-ky.html?utm_source=top_navigation&amp;utm_medium=cpc&amp;utm_campaign=rapian_help" class="rap-button rap-button-medium rap-button-free" style="float: none;">Đăng ký ngay</a>
+			</div>
+		</section>
+	</header>
 	{% block sidebar %}
 		<nav id="sidebar">
 			{% include 'partials/sidebar.html.twig' %}
