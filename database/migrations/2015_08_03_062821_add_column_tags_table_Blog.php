@@ -12,10 +12,10 @@ class AddColumnTagsTableBlog extends Migration
      */
     public function up()
     {
-        Schema::table('blogs', function($table)
-        {
-            $table->string('tags');
-        });
+        // Schema::table('blogs', function($table)
+        // {
+        //     $table->string('tags');
+        // });
     }
 
     /**

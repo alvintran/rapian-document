@@ -12,12 +12,12 @@ class AlterUsersTableToAddSocialiteId extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('facebook_id', 50)->unique();
-            $table->string('github_id', 50)->unique();
-            $table->string('google_id', 50)->unique();
-            $table->string('twitter_id', 50)->unique();
-        });
+        // Schema::table('users', function (Blueprint $table) {
+        //     $table->string('facebook_id', 50)->unique();
+        //     $table->string('github_id', 50)->unique();
+        //     $table->string('google_id', 50)->unique();
+        //     $table->string('twitter_id', 50)->unique();
+        // });
     }
 
     /**

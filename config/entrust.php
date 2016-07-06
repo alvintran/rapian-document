@@ -51,7 +51,7 @@ return [
     | database.
     |
     */
-    'permissions_table' => 'permissions',
+    'permissions_table' => 'ent_permissions',
 
     /*
     |--------------------------------------------------------------------------

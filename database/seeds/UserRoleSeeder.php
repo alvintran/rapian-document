@@ -22,7 +22,7 @@ class UserRoleSeeder extends Seeder
      */
     public function run()
     {
-    	$user = $this->user->getById(1);
+    	$user = $this->user->getById(51);
     	$role = $this->role->getByName('superadmin');
     	$user->roles()->attach($role);
     }

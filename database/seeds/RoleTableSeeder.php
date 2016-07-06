@@ -21,11 +21,6 @@ class RoleTableSeeder extends Seeder
 				'name' => 'admin',
 				'display_name' => 'Administrator',
 				'description' => 'Administrator role'
-			],
-			[
-				'name' => 'editor',
-				'display_name' => 'Editor',
-				'description' => 'Editor role'
 			]
 		]);
     }

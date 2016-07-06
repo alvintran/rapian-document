@@ -34,7 +34,7 @@ class EntrustSetupTables extends Migration
         });
 
         // Create table for storing permissions
-        Schema::create('permissions', function (Blueprint $table) {
+        Schema::create('ent_permissions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('display_name')->nullable();
@@ -47,7 +47,7 @@ class EntrustSetupTables extends Migration
             $table->integer('permission_id')->unsigned();
             $table->integer('role_id')->unsigned();
 
-            $table->foreign('permission_id')->references('id')->on('permissions')
+            $table->foreign('permission_id')->references('id')->on('ent_permissions')
                 ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('role_id')->references('id')->on('roles')
                 ->onUpdate('cascade')->onDelete('cascade');
@@ -64,7 +64,7 @@ class EntrustSetupTables extends Migration
     public function down()
     {
         Schema::drop('permission_role');
-        Schema::drop('permissions');
+        Schema::drop('ent_permissions');
         Schema::drop('role_user');
         Schema::drop('roles');
     }

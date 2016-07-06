@@ -14,7 +14,7 @@
 
 	<h3>{{ trans('admin/general.create_info') . ' ' }}Blog</h3>
 	<div class="panel-body">
-		<form class="form-horizontal bucket-form" method="post" action="{{ route('blog.store') }}" enctype="multipart/form-data">
+		<form class="form-horizontal bucket-form col-md-10 col-sm-12" method="post" action="{{ route('blog.store') }}" enctype="multipart/form-data">
 
 			<div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
 				<label for="title" class="col-sm-2 control-label">Tiêu đề <b class="text-danger">*</b></label>
@@ -25,22 +25,9 @@
 			</div>
 
 			<div class="form-group">
-<<<<<<< HEAD
 				<label for="image" class="col-sm-2 control-label">Ảnh mô tả</label>
-=======
-				<label for="image" class="col-sm-2 control-label">Ảnh mô tả <b class="text-danger">*</b></label>
->>>>>>> f7a80eeaab2f4bf874a5e83740af8c60f8779c89
 				<div class="col-sm-10">
 					<input name="image" type="file" class="form-control" placeholder='Image' />
-					{!! $errors->first('image', '<span class="help-inline text-danger">:message</span>') !!}
-				</div>
-			</div>
-
-			<div class="form-group {{ $errors->has('teaser') ? 'has-error' : '' }}">
-				<label for="teaser" class="col-sm-2 control-label">Tóm tắt <b class="text-danger">*</b></label>
-				<div class="col-sm-10">
-				   <input type="text" class="form-control" id="teaser" name="teaser" placeholder="Tóm tắt bài viết" value="{{ Request::old('teaser') }}" />
-					{!! $errors->first('teaser', '<span class="help-inline text-danger">:message</span>') !!}
 				</div>
 			</div>
 

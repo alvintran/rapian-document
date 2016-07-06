@@ -24,11 +24,7 @@ class AppServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-<<<<<<< HEAD
-		if($this->app->environment('local'))
-=======
 		if ($this->app->environment('local'))
->>>>>>> f7a80eeaab2f4bf874a5e83740af8c60f8779c89
 		{
 			$this->app->register('Barryvdh\Debugbar\ServiceProvider');
 		}

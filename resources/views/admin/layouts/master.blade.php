@@ -7,9 +7,7 @@
 	<link rel="shortcut icon" href="/images/favicon.png">
 	<title>{{ trans('admin/general.heading') }}</title>
 	<!--Core CSS -->
-	<link href="/bs3/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/js/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet">
-	<link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
 	<link href="/js/data-tables/DT_bootstrap.css" rel="stylesheet">
 	<!-- Js styles for this template -->
 	<link href="/js/select2/select2.css" rel="stylesheet" />
@@ -38,6 +36,7 @@
 	</section>
 </section>
 <script src="/js/admin_all.js"></script>
+<script src="/js/ckeditor/ckeditor.js"></script>
 <!--script for this page-->
 @yield('scripts')
 </body>

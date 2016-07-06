@@ -24,10 +24,10 @@ class AdminSettingFormRequest extends Request
     public function rules()
     {
         return [
-            'name'    => 'required',
+            'title'    => 'required',
             'address' => 'required',
-            'email_1' => 'required|email',
-            'phone_1' => 'required'
+            'email' => 'required|email',
+            'phone' => 'required'
         ];
     }
 }

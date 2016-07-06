@@ -23,11 +23,11 @@
 				</div>
 			</div>
 
-			<div class="form-group {{ $errors->has('googleplus') ? 'has-error' : '' }}">
+			<div class="form-group {{ $errors->has('gplus') ? 'has-error' : '' }}">
 				<label for="skype" class="col-sm-3 control-label">{{ trans('form.settings.googleplus') }}</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control" id="googleplus" name="googleplus" placeholder="{{ trans('form.settings.googleplus') }}" value="{{ Request::old('googleplus', $social->googleplus) }}" />
-					{!! $errors->first('googleplus', '<span class="help-inline text-danger">:message</span>') !!}
+					<input type="text" class="form-control" id="gplus" name="gplus" placeholder="{{ trans('form.settings.googleplus') }}" value="{{ Request::old('gplus', $social->gplus) }}" />
+					{!! $errors->first('gplus', '<span class="help-inline text-danger">:message</span>') !!}
 				</div>
 			</div>
 
@@ -39,13 +39,13 @@
 				</div>
 			</div>
 
-			<div class="form-group {{ $errors->has('linkin') ? 'has-error' : '' }}">
+			<!-- <div class="form-group {{ $errors->has('linkin') ? 'has-error' : '' }}">
 				<label for="skype" class="col-sm-3 control-label">{{ trans('form.settings.linkin') }}</label>
 				<div class="col-sm-6">
 					<input type="text" class="form-control" id="linkin" name="linkin" placeholder="{{ trans('form.settings.linkin') }}" value="{{ Request::old('linkin', $social->linkin) }}" />
 					{!! $errors->first('linkin', '<span class="help-inline text-danger">:message</span>') !!}
 				</div>
-			</div>
+			</div> -->
 
 			<div class="form-group {{ $errors->has('youtube') ? 'has-error' : '' }}">
 				<label for="skype" class="col-sm-3 control-label">{{ trans('form.settings.youtube') }}</label>
