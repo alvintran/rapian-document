@@ -41,6 +41,8 @@ genero, virtus rite.
 - Ego uterque tibi canis
 - Tamen arbore trepidosque
 
+![](giphy.gif)
+
 ## Colit potiora ungues plumeus de glomerari num
 
 Conlapsa tamen innectens spes, in Tydides studio in puerili quod. Ab natis non

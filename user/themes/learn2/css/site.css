@@ -331,3 +331,7 @@ body.scroll #pageNote {
     transition: all 0.5s ease;
     display: none;
 }
+#body img, #body .video-container {
+    box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+    padding: 3px;
+}
