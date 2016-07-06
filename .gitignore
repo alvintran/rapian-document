@@ -2,8 +2,8 @@
 /node_modules
 .env
 composer.lock
-/log/grav.log
-/log/populariry/*
+/logs/grav.log
+/logs/populariry/*
 /cache
 /backup
 /user/pages
