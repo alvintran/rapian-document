@@ -1,0 +1,16 @@
+title: 'Rapian Documentation'
+author:
+  name: Rapian
+  email: cskh@rapian.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Tài liệu hướng dẫn sử dụng Rapian'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog
